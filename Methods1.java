@@ -70,18 +70,13 @@ public class Methods1 {
 
             else if (y>=0){
                 double product=1;
-                int a=0;
-                do{
+                for(int a=0; a<y; a++){
                     product*=z;
                     a++;
-                 }while(a<y);
+                 }
                 result+=y+product;
             }
 
             return result;
         }
 }
-
-
-
-

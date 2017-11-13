@@ -1,0 +1,34 @@
+  public static double power(int x ,int y){
+        double product=1;
+        if(y>=0){
+            for(int a=0; a<y; a++){
+                product=product*x;
+                a++;
+            }
+        }
+        else if (y<0){
+            int a=0;
+            do{
+                product=product*1/x;
+                a--;
+            }while(a>y);
+        }
+        return product;
+    }
+    
+    public static double squareroot(int x){
+        double y=0;
+        double z=0;
+        do{ z+=0.000001;
+            y=z*z;
+        }while (y<x);
+        return z;
+    }
+    
+    public static int absolute(int x) {
+        if (x < 0) {
+            x = x * (-1);
+        }
+        return x;
+    }
+    

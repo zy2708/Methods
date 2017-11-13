@@ -48,34 +48,39 @@ public class Methods1 {
             z=x+y;
             return z;
         }
-        public static long g(int x,int y,int z){
-            int result=0;
-            result+=x*x;
+        public static double g(int x,int y,int z){
+            double result=0;
+            double m=0;
+            double n=0;
+            do{ n+=0.000001;
+                m=n*n;
+            }while (m<x);
+            result+=n;
 
             if (y<0){
-                y=y*(-1);
-                int product=1;
+                double product=1;
                 int a=0;
                 do{
-                    product*=1/z;
+                    product=product*1/z;
                     a--;
-                }while(y<a);
+                }while(a>y);
+                y=y*(-1);
+                result+=y+product;
             }
 
-            else y=y;
-                int product=1;
+            else if (y>=0){
+                double product=1;
                 int a=0;
                 do{
                     product*=z;
                     a++;
                  }while(a<y);
-
-            result+=y+product;
+                result+=y+product;
+            }
 
             return result;
         }
 }
-
 
 
 
